@@ -30,8 +30,8 @@ public class astro_hareket : MonoBehaviour //MonoBehavior'dan türetilmiþ aslýnda
     void Start() //guncelleme methodlarýndan herhangi birisi çaðýrýlmadan önce start fonksiyonu çaðýrýlýr oyun baþladýðýnda sadece ve sadece bir kez çalýþacak fonksiyonlarýn yerleþtirildiði yer
     {
         animator = GetComponent<Animator>();
-
-
+        astronot_genel_hiz = 1f;
+        gravity_scale = 2f;
         isDead = false;
         joystick = FindObjectOfType<Joystick>();
         joybutton = FindObjectOfType<Joybutton>();
@@ -39,6 +39,7 @@ public class astro_hareket : MonoBehaviour //MonoBehavior'dan türetilmiþ aslýnda
         rend = GetComponent<Renderer>();
         sprite = GetComponent<SpriteRenderer>();
         benzin_miktar = 1f;
+        hiz_katsayisi = 0.3f;
     }
 
     // Update is called once per frame
