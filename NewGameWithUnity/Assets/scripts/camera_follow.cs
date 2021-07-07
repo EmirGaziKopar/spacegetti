@@ -123,6 +123,7 @@ public class camera_follow : MonoBehaviour
             Debug.Log("Hizlan !!!");
             /* astro_hareket.rb_astro.gravityScale = 3.5f; //hýzlandýðý için fazla yükseliyor buna önlem olarak geliþtirildi*/
         }
+        /*
         if (zaman > 30 && sayac == 4)
         { //30.sn'de tuhaf bir itme oluyor 
             sayac++;
@@ -130,7 +131,7 @@ public class camera_follow : MonoBehaviour
             hiz *= 1.200f;
             camera_rigit.velocity = transform.right * hiz * Time.deltaTime;
             Debug.Log("Hizlan !!!");
-            /* astro_hareket.rb_astro.gravityScale = 4.2f; //hýzlandýðý için fazla yükseliyor buna önlem olarak geliþtirildi */
+            
         }
         if (zaman > 40 && sayac == 5)
         {
@@ -139,8 +140,9 @@ public class camera_follow : MonoBehaviour
             hiz *= 1.5f;
             camera_rigit.velocity = transform.right * hiz * Time.deltaTime;
             Debug.Log("Hizlan !!!");
-            /* astro_hareket.rb_astro.gravityScale = 4.2f; //hýzlandýðý için fazla yükseliyor buna önlem olarak geliþtirildi */
+            // astro_hareket.rb_astro.gravityScale = 4.2f;
         }
+        */
         camera_rigit.velocity = transform.right * hiz * Time.deltaTime; //problemin sebebi burasý
 
 
