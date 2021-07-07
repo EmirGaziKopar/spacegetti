@@ -55,7 +55,7 @@ public class astro_hareket : MonoBehaviour //MonoBehavior'dan türetilmiþ aslýnda
         animator.SetBool("yere_indi", false);
         if (benzin_miktar > 0)
         {
-            benzin_miktar -= 0.001f;
+            benzin_miktar -= 0.0001f;
             canbar.transform.localScale = new Vector3(benzin_miktar, 1, 1);
         }
         
@@ -152,13 +152,17 @@ public class astro_hareket : MonoBehaviour //MonoBehavior'dan türetilmiþ aslýnda
         
         if(collision.tag == "coins")
         {
-            
-            coins++;
-            benzin_miktar += 0.1f;
-            Debug.Log("Coin toplandi !!! ");
-            Destroy(collision.gameObject); // Tepkimeye giren gameObject'e eriþip yok ediyoruz  
-            //rend.material.color = Color.black;//
-            canbar.transform.localScale = new Vector3(benzin_miktar, 1, 1);
+            if ( benzin_miktar < 1f)
+            {
+                coins++;
+                benzin_miktar += 0.05f;
+                Debug.Log("Coin toplandi !!! ");
+                // Tepkimeye giren gameObject'e eriþip yok ediyoruz  
+                                               //rend.material.color = Color.black;//
+                canbar.transform.localScale = new Vector3(benzin_miktar, 1, 1);
+            }
+            Destroy(collision.gameObject);
+
 
         }
         if(collision.tag == "ufo" && kontrol == 0)

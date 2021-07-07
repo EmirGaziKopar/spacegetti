@@ -7,6 +7,9 @@ public class button : MonoBehaviour
 {
     bool sol, sag;
     
+
+    
+
     void Start()
     {
         astro_hareket.astro_hiz = astro_hareket.astronot_genel_hiz;
