@@ -7306,9 +7306,9 @@ MonoBehaviour:
   yesil: {fileID: 1103628738}
   xEkseni: 3
   xEkseni2: 33
-  time: 0.7
-  yEkseni: 8
-  fark: 40
+  time: 1
+  yEkseni: 7
+  fark: 39
 --- !u!224 &1845843215 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
@@ -7430,7 +7430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939829450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.9, y: 2.4, z: 0}
+  m_LocalPosition: {x: -88.4, y: 16, z: 0}
   m_LocalScale: {x: 0.5883, y: 0.5883, z: 0.5883}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7537,7 +7537,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: edecbaf030cbb1f4fbf1d791a6b2639b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
