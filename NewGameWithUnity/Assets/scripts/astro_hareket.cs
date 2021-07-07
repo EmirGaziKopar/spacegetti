@@ -4,6 +4,10 @@ using UnityEngine; //unity ile haberleþebilmek için gerekli olan fonksiyonlarýn 
 using UnityEngine.SceneManagement;
 public class astro_hareket : MonoBehaviour //MonoBehavior'dan türetilmiþ aslýnda sizin eklediðiniz her bir c# dosyasý arkada hazýr bir c# dosyasýndan türetülüp buraya konuluyor
 {
+    public AudioSource ads;
+    
+    public AudioSource adsUfo;
+    public AudioSource adsHap;
     Animator animator;
     public GameObject canbar;
     public float benzin;
@@ -132,6 +136,8 @@ public class astro_hareket : MonoBehaviour //MonoBehavior'dan türetilmiþ aslýnda
         {
             Debug.Log("denenefsdfasdfsasdasfsdfasdfasdfdasfasdfsdfasfasfdasdfasfsfsf");
             animator.SetBool("yere_indi", true);
+            ads.Play();
+            
         }
         
 
@@ -160,7 +166,11 @@ public class astro_hareket : MonoBehaviour //MonoBehavior'dan türetilmiþ aslýnda
                 // Tepkimeye giren gameObject'e eriþip yok ediyoruz  
                                                //rend.material.color = Color.black;//
                 canbar.transform.localScale = new Vector3(benzin_miktar, 1, 1);
+
+                adsHap.Play();
+
             }
+            
             Destroy(collision.gameObject);
 
 
@@ -170,6 +180,8 @@ public class astro_hareket : MonoBehaviour //MonoBehavior'dan türetilmiþ aslýnda
             gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic; //statik olan öðeyi Dynamic yapar 
             rb_astro.gravityScale = -1f; 
             kontrol = 1;
+            adsUfo.Play();
+
         }
         
         else if(collision.tag == "ufo" && kontrol == 1)
